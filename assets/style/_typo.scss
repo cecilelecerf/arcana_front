@@ -1,0 +1,40 @@
+html{
+    font-family: 'Jadi';
+    font-size: 24px;
+    font-weight: normal;
+}
+
+h1{
+    font-family: 'JosefinSans';
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+h2{
+    font-family: 'JosefinSans';
+    font-size: 1.7rem;
+    font-weight: normal;
+    font-style: italic;
+}
+button{
+    font-family: 'JosefinSans';
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+p, a{
+    font-family: 'Jadi';
+    font-size: 24px;
+    font-weight: normal;
+    @media screen and (min-width: 768px) {
+        &{
+            font-size: 17px;
+        }
+      }
+}
+
+label {
+    font-family: 'Jadi';
+    font-size: 1.4rem;
+    font-weight: bold;
+}

@@ -9,6 +9,8 @@
 
 <style lang="scss">
 h1{
-    color: $white;
+    color: $black;
+    font-family: 'JosefinSans', 'Courier New', Courier, monospace;
+    font-weight: light;
 }
 </style>
