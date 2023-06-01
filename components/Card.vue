@@ -9,7 +9,8 @@ export default{
         date:{
             type: Boolean,
             default : false
-        }
+        },
+        info:Array
     },
 }
 </script>
