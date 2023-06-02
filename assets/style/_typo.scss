@@ -2,6 +2,12 @@ html{
     font-family: 'Jaldi';
     font-size: 22px !important;
     font-weight: normal;
+    @media screen and (max-width: 600px){
+    &{
+        font-size: 17px;
+        line-height: 17px;
+    }
+}
 }
 
 h1{
@@ -16,11 +22,17 @@ h2{
     font-weight: normal;
     font-style: italic;
 }
-button{
+.button a, button{
     font-family: 'JosefinSans';
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
+    @media screen and (max-width: 600px){
+        &{
+            font-size: 17px;
+            line-height: 17px;
+        }
+    }
 }
 p{
     font-family: 'Jaldi';

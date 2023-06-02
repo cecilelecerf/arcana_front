@@ -1,0 +1,15 @@
+
+
+.button {
+    padding: 22px 35px;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    a{
+        text-align: center;
+    }
+    &.primary{
+        background-color: $main;
+        color: $white;
+    }
+}
