@@ -16,7 +16,7 @@ export default{
 </script>
 
 <template>
-    <div class="card"  @mouseenter="hover = !hover" @mouseleave="hover = false">
+    <article class="card"  @mouseenter="hover = !hover" @mouseleave="hover = false">
         <figure>
             <div class="hover" v-if="hover">
                 <h3>
@@ -31,7 +31,7 @@ export default{
             <h6 v-if="date">Date</h6>
             <h6>Voir plus</h6>
         </div>
-    </div>
+    </article>
 </template>
 
 <style lang="scss" scoped>
