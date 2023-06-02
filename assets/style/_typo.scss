@@ -1,0 +1,53 @@
+html{
+    font-family: 'Jaldi';
+    font-size: 22px !important;
+    font-weight: normal;
+}
+
+h1{
+    font-family: 'JosefinSans';
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+h2{
+    font-family: 'JosefinSans';
+    font-size: 1.7rem;
+    font-weight: normal;
+    font-style: italic;
+}
+button{
+    font-family: 'JosefinSans';
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+p{
+    font-family: 'Jaldi';
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 22px;
+    @media screen and (max-width: 600px) {
+        &{
+            font-size: 17px;
+            line-height: 17px;
+        }
+    }
+}
+
+label, h3 {
+    font-family: 'Jaldi';
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-family: 'Jaldi';
+    font-size: 1rem;
+    font-weight: normal;
+    @media screen and (max-width: 600px) {
+        &{
+            font-size: 12px;
+        }
+    }
+}

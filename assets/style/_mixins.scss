@@ -1,0 +1,6 @@
+@mixin grid { 
+  grid-template-columns: repeat(5, 1fr);
+}
+@mixin mobileGrid { 
+  grid-template-columns: repeat(5, 1fr);
+}
