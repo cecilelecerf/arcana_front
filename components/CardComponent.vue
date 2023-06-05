@@ -41,7 +41,7 @@ export default{
     height: fit-content;
     color: $white;
     border-radius: 3px;
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:768px) {
         width: 150px;
         border-bottom: 1.83px;
     }
@@ -49,7 +49,7 @@ export default{
         width: 100%;
         height: 268px;
         position: relative;
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:768px) {
         height: 132px;
         }
         img{
@@ -78,7 +78,7 @@ export default{
     & > div {
         padding: 15px 25px;
         text-align: center;
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:768px) {
         padding: 5px 16px;
         }
         p:first-child{

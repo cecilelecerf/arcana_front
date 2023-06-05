@@ -15,7 +15,7 @@
     border: solid 2px $main;
     transition: all 300ms ease-out;
     color: $white;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         &{
             padding: 11px 17px;
         }
