@@ -1,5 +1,6 @@
 <template>
     <div>
-        <InstrumentDefaultFlute :styleOutline="false"/>
+        <InstrumentFlute :styleOutline="true"/>
+        <InstrumentViolon :styleOutline="false"/>
     </div>
 </template>
