@@ -22,7 +22,7 @@ header{
     color: $white;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 10;
     img{
         max-height: 80px;
         min-width: 85px;
