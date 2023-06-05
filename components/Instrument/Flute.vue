@@ -78,7 +78,7 @@
         }
         p{
             position:absolute;
-            bottom: 22px;
+            bottom: 17px;
             left:10%;
             max-width: 80%;
             text-align: center;
