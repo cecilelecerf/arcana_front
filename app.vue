@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <Card :date="true"/>
-    <CTA />
-    <NuxtWelcome />
+  <div id="app">
+    <VitrineNav />
+  
+    <main>
+      <router-view />
+    </main>
+  
+
+    <!-- <VitrineFooter/> -->
   </div>
 </template>
