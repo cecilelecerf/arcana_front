@@ -1,10 +1,11 @@
 <template>
     <div class="test">
-        <InstrumentViolon :type="false" />
         
-        <InstrumentAlto :type="true" />
+        <InstrumentCello :type="false" />
+        
+        <InstrumentAlto :type="false" />
         <InstrumentTrompette :type="false" />
-        <InstrumentCor :type="true" />
+        <InstrumentCor :type="false" />
         
     </div>
 </template>

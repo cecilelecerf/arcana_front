@@ -44,65 +44,12 @@
 
 <style lang="scss">
      .instrumentComponent{
-        &.iconographique{
-            height: 94px;
-            max-width: 105px;
-            position : relative;
-            z-index: 1;
-            svg{
-                height: 100%;
-                z-index: 1;
-                margin: 0 auto;
-  
-            }
-            .circle{
-                content: "";
-                height: 85.27px;
-                width: 85.27px;
-                border-radius: 100%;
+        @include instrumentStyle;
+        &.iconographique .circle{
                 background-color: $darkBlue;
-                position : absolute;
-                top : 50%;
-                left : 50%;
-                outline: solid;
-                outline-width: 0.75px;
-                outline-color: $white;
-                transform: translate(-50%, -50%);
-                z-index: -1;
-            }
         }
-
         &.text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 0;
-            width : 155px;
-            height: 155px;
             color: $darkBlue;
-            text-align: center;
-            position : relative;
-            svg{
-                height: 75px;
-                max-width: 110px;
-                z-index: 1;
-            }
-            p{
-                max-width: 110px;
-                z-index: 1;
-            }
-            &::before{
-                content: "";
-                position : absolute;
-                height: 155px;
-                width: 155px;
-                top : 0px;
-                left : 0px;
-                border-radius: 100%;
-                background-color: $white;
-            }
-
         }
     }
 </style>

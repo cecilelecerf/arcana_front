@@ -44,6 +44,8 @@
 
 <style lang="scss" scoped>
     .instrumentComponent{
+        
+        @include instrumentStyle;
         &.iconographique .circle{
                 background-color: $green;
         }
