@@ -6,7 +6,7 @@
       <router-view />
     </main>
   
-    <footer>
-    </footer>
+
+    <!-- <VitrineFooter/> -->
   </div>
 </template>

@@ -42,7 +42,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
      .instrumentComponent{
         @include instrumentStyle;
         &.iconographique .circle{

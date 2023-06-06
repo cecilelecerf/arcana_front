@@ -11,5 +11,5 @@
 </template>
 <style lang="scss">
 .test{
-    background-color: $main;
+    // background-color: $main;
 }</style>
