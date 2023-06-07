@@ -12,13 +12,12 @@
                 default : 'Lorem impsum'
             },
             firstButton:{
-                type: Array,
+                type: Object,
                 required: true,
-                default: () => []
             },
             secondButton:{
-                type: Array,
-                default: () => []
+                type: Object,
+                required: false
             },
             twoButton:{
                 type:Boolean,
@@ -36,7 +35,8 @@
             <NuxtLink :to="firstButton.link" class="button secondary">{{firstButton.txt}}</NuxtLink>
             <NuxtLink :to="secondButton.link" class="button Outline" v-if="twoButton">{{secondButton.txt}}</NuxtLink>
         </div>
-        <nuxt-icon name="Frame_1" class="icon"></nuxt-icon>
+        <NuxtLink to="#scrollTo"  id="iconScroll" class="icon"><nuxt-icon name="Frame_1"></nuxt-icon></NuxtLink>
+        
     </article>
 </template>
 

@@ -39,5 +39,10 @@
         }
     }
 } 
+
+html, #scroll, #iconScroll{
+    scroll-behavior: smooth;
+    scroll-margin-top: -20px;
+}
 // 768px
 // 480px

@@ -9,20 +9,24 @@ export default {
             type : Boolean,
             default : true
         },
+        info:{
+            type : Object,
+            required: true,
+        }
     }
 }
 </script>
 
 <template>
     <article class="article">
-        <img src="@/static/images/FB_IMG_1556548727508.png" alt="">
+        <img :src="info.picture_id.adress" :alt="info.picture_id.alt">
         <div>
             <div>
-                <h2>Titre de l'article</h2>
-                <p v-if="date">Date de l'event</p>
+                <h2>{{ info.title }}</h2>
+                <p v-if="date">{{ info.date }}</p>
             </div>
-            <p v-if="location">Lieu de l'évènement</p>
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maioresLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laudantium! Omnis, reiciendis sit. Nemo ipsa laboriosam optio atque deleniti magni laudantium minima nesciunt quos. Corporis cum magnam pariatur unde maiores.</p>            
+            <p v-if="location">{{ info.location }}</p>
+            <p class="description">{{ info.description }}</p>            
             <h6>Voir plus</h6>            
         </div>
     </article>

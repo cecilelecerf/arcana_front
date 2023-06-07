@@ -5,11 +5,9 @@ export default {
 </script>
 
 <template>
-    <div>TEST</div>
+    <div></div>
 </template>
 
 <style lang="scss" scoped>
-    div{
-        
-    }
+
 </style>

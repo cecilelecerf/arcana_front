@@ -1,18 +1,23 @@
 
 <template>
-    <div id="index">
+    <main id="index">
         <Introduction
-        twoButton="true"
+            :twoButton=true
             title="Les évènements"
             description="Découvrez les événements passés et à venir de l'association Arcana, où la musique et la convivialité sont toujours au rendez-vous !"
             :first-button="{ txt: 'Futurs évènements', link: '/events/futur' }"
             :second-button="{ txt: 'Evènements passés', link: '/events/past' }"
         />
-    </div>
+        <EventsFuturArticle />
+        <EventsPastArticle/>
+    </main>
 </template>
 
 <style lang="scss" scoped>
     #index{
         @include grid;
+        & > * {
+            margin-bottom: 100px;
+        }
     }
 </style>

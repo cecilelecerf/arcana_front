@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <VitrineNav />
-  
-    <main>
+
       <router-view />
-    </main>
+    
   
 
-    <!-- <VitrineFooter/> -->
+    <VitrineFooter/>
   </div>
 </template>

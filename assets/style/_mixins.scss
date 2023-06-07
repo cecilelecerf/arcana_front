@@ -113,3 +113,8 @@
 
   }
 }
+
+@mixin scroll{
+  scroll-behavior: smooth;
+  scroll-margin-top: -20px;
+}

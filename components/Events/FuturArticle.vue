@@ -19,18 +19,29 @@
     }
 </script>
 <template>
-    <div id="futurArticle">
+    <article id="scrollTo" class="futurArticle">
+        <h1>Nos futurs évènements</h1>
+        <p>Vous êtes à la recherche d'activités musicales à venir pour assouvir votre passion ? Ne cherchez plus ! L'association Arcana a toujours quelque chose de prévu pour tous les amateurs de musique, qu'il s'agisse de concerts, d'auditions, de stages ou d'autres événements musicaux. Notre programme varié et riche en événements vous permettra de partager des moments uniques et conviviaux avec des passionnés de musique, et de faire partie d'une communauté engagée et dynamique. Consultez régulièrement notre page pour ne rien manquer et soyez au courant des dernières actualités de l'association. Nous avons hâte de vous accueillir et de partager avec vous des moments inoubliables en musique !</p>
         <NuxtLink v-for="futur in futurs" :key="futur.id" :to="`events/futur/${ futur.id }`">
-            <CardComponent :info="futur"/>
+            <ArticleComponent :info="futur"/>
         </NuxtLink>
+        <NuxtLink to="/events/futur" class="button primary">Voir tous les futurs évènements</NuxtLink>
 
-    </div>
+    </article>
 </template>
 
 <style lang="scss" scoped>
-    #futurArticle{
-        a:first-child .card{
-            background-color: $red !important;
+    
+    .futurArticle{
+        grid-column : 2 / 5;
+        & > * {
+            margin-bottom: 50px;
+        }
+        & > *:last-child{
+            margin-bottom: 0;
+        }
+        & > a {
+            display :block
         }
 
 

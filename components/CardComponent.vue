@@ -2,7 +2,7 @@
 export default{
     data(){
         return{
-            hover : true
+            hover : false
         }
     },
     props:{
@@ -11,7 +11,7 @@ export default{
             default : false
         },
         info:{
-            type: Array,            
+            type: Object,
             required: true,
         }
     },
@@ -19,7 +19,7 @@ export default{
 </script>
 
 <template>
-    <article class="card"  >
+    <article class="card"  @mouseenter="hover = !hover" @mouseleave="hover = false">
         <figure>
             <div class="hover" v-if="hover">
                 <h3>
@@ -41,12 +41,11 @@ export default{
 <style lang="scss" scoped>
 .card{
     background-color: $main;
-    width: 270px;
+    width: 100%;
     height: fit-content;
     color: $white;
     border-radius: 3px;
     @media screen and (max-width:768px) {
-        width: 150px;
         border-bottom: 1.83px;
     }
     figure{
@@ -60,6 +59,8 @@ export default{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 3px 3px 0 0;
+            
         }
     }
     & > div {
@@ -87,6 +88,8 @@ export default{
         position: absolute;
         top: 0px;
         left: 0px;
+        
+        border-radius: 3px 3px 0 0;
         h3{
             position: absolute;
             top: 50%;
@@ -96,7 +99,6 @@ export default{
             align-items: center;
             span{
                 font-size: 1.25rem;
-                // margin-top: -5px;
                 margin-right: 10px;
             }
             z-index: 2;
@@ -106,8 +108,8 @@ export default{
             background-color: rgb(0, 0, 0, 0.6);
             height: 100%;
             width: 100%;
+            border-radius: 3px 3px 0 0;
         }
     }
-
 }
 </style>
