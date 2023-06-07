@@ -1,4 +1,6 @@
 <script lang="ts">
+    export default{
+    }
 </script>
 
 <template>
@@ -9,7 +11,7 @@
             <NuxtLink class="button secondary">Futurs évènements</NuxtLink>
             <NuxtLink class="button Outline">Evènements passés</NuxtLink>
         </div>
-        <nuxt-icon name="chevronsDown" class="icon"></nuxt-icon>
+        <nuxt-icon name="Frame_1" class="icon"></nuxt-icon>
     </article>
 </template>
 
@@ -34,11 +36,25 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            @media screen and (max-width:768px){
+                flex-direction: column;
+                a:first-child{
+                    margin-bottom : 10px
+                }
+            }
         }
         .icon{
             grid-column: 3;
             justify-self: center;
-
+            font-size:2rem;
+            svg .nuxt-icon.nuxt-icon--fill{
+                fill: none !important;
+                
+                
+            }
+        }
+        @media screen and (min-width:1000px) {
+            padding-bottom: 5%;
         }
 
     }
