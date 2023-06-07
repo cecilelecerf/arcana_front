@@ -6,7 +6,7 @@ export default{
         }
     },
     props:{
-        date:{
+        toogleDate:{
             type: Boolean,
             default : false
         },
@@ -24,12 +24,12 @@ export default{
                     Voir plus
                 </h3>                
             </div>
-            <img src="" alt="">
+            <img :src="info.picture_id.adress" :alt="info.picture_id.alt">
         </figure>
         <div>
-            <p>Musique collective</p>
-            <h6 v-if="date">Date</h6>
-            <h6>Voir plus</h6>
+            <p>{{info.title}}</p>
+            <h6 v-if="toogleDate">Date</h6>
+            <NuxtLink :to="`events/futur?${ info.id }`"><h6>Voir plus</h6></NuxtLink>
         </div>
     </article>
 </template>
