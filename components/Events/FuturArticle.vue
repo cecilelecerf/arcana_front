@@ -19,10 +19,20 @@
     }
 </script>
 <template>
-    <div>
-        <NuxtLink v-for="futur in futurs" :key="futur.id" :to="`events/futur?${ futur.id }`">
+    <div id="futurArticle">
+        <NuxtLink v-for="futur in futurs" :key="futur.id" :to="`events/futur/${ futur.id }`">
             <CardComponent :info="futur"/>
         </NuxtLink>
 
     </div>
 </template>
+
+<style lang="scss" scoped>
+    #futurArticle{
+        a:first-child .card{
+            background-color: $red !important;
+        }
+
+
+    }
+</style>

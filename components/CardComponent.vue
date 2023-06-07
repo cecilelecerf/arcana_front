@@ -20,16 +20,17 @@ export default{
         <figure>
             <div class="hover" v-if="hover">
                 <h3>
-                    <Icon name="streamline:interface-add-1-expand-cross-buttons-button-more-remove-plus-add" class="icon"></Icon> 
+                    <nuxt-icon name="more" id="icon"></nuxt-icon>
                     Voir plus
-                </h3>                
+                </h3>
+                <div class="filter"></div>         
             </div>
             <img :src="info.picture_id.adress" :alt="info.picture_id.alt">
         </figure>
         <div>
             <p>{{info.title}}</p>
             <h6 v-if="toogleDate">Date</h6>
-            <NuxtLink :to="`events/futur?${ info.id }`"><h6>Voir plus</h6></NuxtLink>
+            <NuxtLink :to="`events/futur/${ info.id }`"><h6>Voir plus</h6></NuxtLink>
         </div>
     </article>
 </template>
@@ -57,23 +58,6 @@ export default{
             height: 100%;
             object-fit: cover;
         }
-        div{    
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            h3{
-                position: absolute;
-                top: calc(50% - 17px);
-                left: calc(50% - 58px);
-                .icon{
-                    font-size: 1rem;
-                    margin-top: -5px;
-                    margin-right: 10px;
-                }
-            }
-        }
     }
     & > div {
         padding: 15px 25px;
@@ -91,6 +75,35 @@ export default{
             text-decoration: underline;
         }
 
+    }
+
+    // hover
+    .hover{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        h3{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            display:flex;
+            align-items: center;
+            span{
+                font-size: 1.25rem;
+                // margin-top: -5px;
+                margin-right: 10px;
+            }
+            z-index: 2;
+        }
+        div{
+            position : relative;
+            background-color: rgb(0, 0, 0, 0.6);
+            height: 100%;
+            width: 100%;
+        }
     }
 }
 </style>
