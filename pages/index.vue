@@ -1,10 +1,12 @@
 
 <template>
-    <div>
-
-        <TestComponent/>
+    <div id="index">
+        <Introduction/>
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+    #index{
+        @include grid;
+    }
 </style>

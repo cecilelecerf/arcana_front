@@ -1,15 +1,43 @@
 .button {
-    padding: 22px 35px;
+    padding: 17px 30px;
     border-radius: 4px;
     width: fit-content;
     height: fit-content;
+    border: solid 2px #637EDF;
+    transition: all 300ms ease-out;
+    color: #fff;
+    @media screen and (max-width: 768px) {
+        &{
+            padding: 11px 17px;
+        }
+    }
     a{
         text-align: center;
     }
     &.primary{
-        background-color: $main;
-        color: $white;
+        background-color: #637EDF;
+        &:hover{
+            color: #637EDF;
+            background-color: transparent;
+        }
     }
-}
+    &.secondary{
+        background-color: #fff;
+        color: #637EDF;
+        &:hover{
+            border-color: #fff;
+            background-color: #637EDF;
+            color: #fff;
+        }
+    }
+    &.Outline{
+        border-color: #fff;
+        &:hover{
+            background-color: #fff;
+            border-color: #637EDF;
+            color: #637EDF;
+        }
+    }
+} 
 // 768px
 // 480px

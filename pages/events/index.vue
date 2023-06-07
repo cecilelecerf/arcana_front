@@ -26,7 +26,7 @@
 </script>
 
 <template>
-    <div>
+    <div id="eventsIndex">
         <!-- <pre>
             {{ pasts }}
         </pre> -->
@@ -44,5 +44,7 @@
 </template>
 
 <style lang="scss" scoped>
-
+    #eventsIndex{
+        @include grid;
+    }
 </style>
