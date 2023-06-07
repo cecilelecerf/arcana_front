@@ -1,6 +1,8 @@
+<script>
+
+</script>
 <template>
     <div>
-        
-        <VitrineNav />
+
     </div>
 </template>
