@@ -1,15 +1,40 @@
 <script lang="ts">
     export default{
+        props:{
+            title:{
+                type: String,
+                required: true,
+                default : 'Title'
+            },
+            description:{
+                type: String,
+                required: true,
+                default : 'Lorem impsum'
+            },
+            firstButton:{
+                type: Array,
+                required: true,
+                default: () => []
+            },
+            secondButton:{
+                type: Array,
+                default: () => []
+            },
+            twoButton:{
+                type:Boolean,
+                default: false
+            }
+        }
     }
 </script>
 
 <template>
     <article id="introduction">
-        <h1>Titre</h1>
-        <p>Découvrez les événements passés et à venir de l'association Arcana, où la musique et la convivialité sont toujours au rendez-vous !</p>
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
         <div>
-            <NuxtLink class="button secondary">Futurs évènements</NuxtLink>
-            <NuxtLink class="button Outline">Evènements passés</NuxtLink>
+            <NuxtLink :to="firstButton.link" class="button secondary">{{firstButton.txt}}</NuxtLink>
+            <NuxtLink :to="secondButton.link" class="button Outline" v-if="twoButton">{{secondButton.txt}}</NuxtLink>
         </div>
         <nuxt-icon name="Frame_1" class="icon"></nuxt-icon>
     </article>
@@ -47,16 +72,14 @@
             grid-column: 3;
             justify-self: center;
             font-size:2rem;
-            svg .nuxt-icon.nuxt-icon--fill{
-                fill: none !important;
-                
-                
-            }
+            fill: none !important;
+        
         }
         @media screen and (min-width:1000px) {
             padding-bottom: 5%;
         }
 
-    }
+
+}
 
 </style>

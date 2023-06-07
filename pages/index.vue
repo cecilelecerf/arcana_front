@@ -1,12 +1,13 @@
+<script lang="ts">
+export default {
+    
+}
+</script>
 
 <template>
-    <div id="index">
-        <Introduction/>
-    </div>
+    <div>TEST</div>
 </template>
 
 <style lang="scss" scoped>
-    #index{
-        @include grid;
-    }
+
 </style>

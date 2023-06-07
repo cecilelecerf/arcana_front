@@ -2,7 +2,7 @@
 export default{
     data(){
         return{
-            hover : false
+            hover : true
         }
     },
     props:{
@@ -10,13 +10,16 @@ export default{
             type: Boolean,
             default : false
         },
-        info:Array
+        info:{
+            type: Array,            
+            required: true,
+        }
     },
 }
 </script>
 
 <template>
-    <article class="card"  @mouseenter="hover = !hover" @mouseleave="hover = false">
+    <article class="card"  >
         <figure>
             <div class="hover" v-if="hover">
                 <h3>
@@ -105,5 +108,6 @@ export default{
             width: 100%;
         }
     }
+
 }
 </style>

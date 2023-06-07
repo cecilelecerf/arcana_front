@@ -1,50 +1,18 @@
-<script setup>
-    const { data : pasts, error: pastsError } = useAsyncData(() =>{
-        return $fetch('http://127.0.0.1:8741/api/events')
-            .then(response => {
-                const pasts = response['hydra:member'];
-                const selectedPasts = pasts.slice(0, 2);
-                return selectedPasts;
-            })
-            .catch(error =>{
-                console.error(error);
-                return [];
-            })
-    });
-    const { data : futurs, error: futursError } = useAsyncData(() =>{
-        return $fetch('http://127.0.0.1:8741/api/posts')
-            .then(response => {
-                const futurs = response['hydra:member'];
-                const selectedFuturs = futurs.slice(0, 2);
-                return selectedFuturs;
-            })
-            .catch(error =>{
-                console.error(error);
-                return [];
-            })
-    })
-</script>
 
 <template>
-    <div id="eventsIndex">
-        <!-- <pre>
-            {{ pasts }}
-        </pre> -->
-        
-        <ul>
-            <li v-for="past in pasts" :key="past.id">
-                <p>{{ past.title }}</p>
-            </li>
-        </ul>
-        <h1>Futur</h1>
-        <ul>
-            <EventsFuturArticle />
-        </ul>
+    <div id="index">
+        <Introduction
+        twoButton="true"
+            title="Les évènements"
+            description="Découvrez les événements passés et à venir de l'association Arcana, où la musique et la convivialité sont toujours au rendez-vous !"
+            :first-button="{ txt: 'Futurs évènements', link: '/events/futur' }"
+            :second-button="{ txt: 'Evènements passés', link: '/events/past' }"
+        />
     </div>
 </template>
 
 <style lang="scss" scoped>
-    #eventsIndex{
+    #index{
         @include grid;
     }
 </style>
