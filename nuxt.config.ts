@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     'nuxt-icons',
   ],
 
-  plugins: ['~/plugins/moment.js'],
 
 
   vite: {

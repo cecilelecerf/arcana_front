@@ -20,6 +20,7 @@ export default{
 
 <template>
     <article class="card"  @mouseenter="hover = !hover" @mouseleave="hover = false">
+
         <figure>
             <div class="hover" v-if="hover">
                 <h3>

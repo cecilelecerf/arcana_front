@@ -19,12 +19,13 @@
     })
 </script>
 
+
 <template>
     <main>
-        <EventsIdIntroduction :title="futur.title" :date="futur.startDate" :img="futur.picture_id.adress"/>
+        <EventsIdIntroduction :info="futur" :title="futur.title" :date="futur.startDate" :img="futur.picture_id.adress"/>
         <div>
             <p>{{ futur.description }}</p>
-            <p>{{ moment() }}</p>
+            <p>{{ date(futur.startDate)}}</p>
         </div>
         <!-- <div>
             {{  api }}

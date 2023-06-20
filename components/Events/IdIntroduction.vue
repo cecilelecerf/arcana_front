@@ -1,38 +1,28 @@
 <script lang="ts">
     export default{
         props:{
-            title:{
-                type: String,
-                required: true,
-                default : 'Title'
-            },
-            date:{
-                type: String,
-                required: true,
-                default: "test"
-            },
             toogleDate:{
                 type: Boolean,
                 default : false,
             },
-            img:{
-                type: String,
-                required: false,
-            },
+            info:{
+                type: Object,
+                required: true,
+            }
         },
         methods:{
-            // formatDate(time){
-            //     date = new Date(time).format("YYYY/MM/DD");
-            //     return date;
-            // }
+            formatDate(){       
+                const test = new Date(this.info.startDate);
+                return test.toLocaleDateString("fr")
+            }
         }
     }
 </script>
 
 <template>
-    <article id="introduction" :style="`backgroundImage: url(${ img })`">
-        <h1>{{title}}</h1>
-        <p>{{date}}</p>
+    <article id="introduction" :style="`backgroundImage: url(${ info.picture_id.adress })`">
+        <h1>{{info.title}}</h1>
+        <p>{{ formatDate() }}</p>
         <NuxtLink to="#scrollTo"  id="iconScroll" class="icon"><nuxt-icon name="Frame_1"></nuxt-icon></NuxtLink>
         
     </article>

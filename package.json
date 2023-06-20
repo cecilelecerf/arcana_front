@@ -28,7 +28,6 @@
     "nuxt-icons": "^3.2.1",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
-    "sass": "^1.62.1",
-    "vue-moment": "^4.1.0"
+    "sass": "^1.62.1"
   }
 }

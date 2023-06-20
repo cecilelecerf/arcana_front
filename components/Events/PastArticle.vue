@@ -2,7 +2,7 @@
     export default{
         setup(){
             const { data : pasts, error: PastsError } = useAsyncData(() =>{
-                return $fetch('http://127.0.0.1:8741/api/posts')
+                return $fetch('http://127.0.0.1:8741/api/events')
                 .then((response) => {
                     const pasts = response['hydra:member'];
                     const selectedPasts = pasts.slice(0, 4);
