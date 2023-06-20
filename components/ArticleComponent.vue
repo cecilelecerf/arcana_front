@@ -50,10 +50,11 @@ export default {
         background-color: $lightBlue;
         width: 20%;
         object-fit: cover;
+        border-radius: 3px 0 0 3px;
     }
     & > div {
         width: 80%;
-        padding: 33.75px 40px;
+        padding: 20px 30px;
         & > div {
             display: flex;
             justify-content: space-between;
@@ -66,6 +67,7 @@ export default {
             max-height: 100px;
             text-overflow: ellipsis;
             overflow: hidden;
+            font-size: 17px;
 
         }
         h6{

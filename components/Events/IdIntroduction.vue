@@ -6,42 +6,39 @@
                 required: true,
                 default : 'Title'
             },
-            description:{
+            date:{
                 type: String,
                 required: true,
-                default : 'Lorem impsum'
+                default: "test"
             },
-            firstButton:{
-                type: Object,
-                required: true,
+            toogleDate:{
+                type: Boolean,
+                default : false,
             },
-            secondButton:{
-                type: Object,
+            img:{
+                type: String,
                 required: false,
-                default:'false'
             },
-            twoButton:{
-                type:Boolean,
-                default: false
-            }
+        },
+        methods:{
+            // formatDate(time){
+            //     date = new Date(time).format("YYYY/MM/DD");
+            //     return date;
+            // }
         }
     }
 </script>
 
 <template>
-    <article id="introduction">
+    <article id="introduction" :style="`backgroundImage: url(${ img })`">
         <h1>{{title}}</h1>
-        <p>{{description}}</p>
-        <div>
-            <NuxtLink :to="firstButton.link" class="button secondary">{{firstButton.txt}}</NuxtLink>
-            <NuxtLink :to="secondButton.link" class="button Outline" v-if="twoButton">{{secondButton.txt}}</NuxtLink>
-        </div>
+        <p>{{date}}</p>
         <NuxtLink to="#scrollTo"  id="iconScroll" class="icon"><nuxt-icon name="Frame_1"></nuxt-icon></NuxtLink>
         
     </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     #introduction{
         @include grid;
         grid-column-start: 1;
@@ -49,8 +46,12 @@
         background-color: $main;
         border-radius: 0 0 80% 80%;
         color: $white;
-        padding: 0 0 10% 0;
+        padding: 2.5% 0 10% 0;
         text-align: center;
+        position: relative;
+        & > * {
+            z-index: 2;
+        }
         h1{
             grid-column: 2/5;
         }
@@ -80,7 +81,19 @@
             padding-bottom: 5%;
         }
 
+        &::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(99,126,223,0.6);
+            padding: 2.5% 0 10% 0;
+            border-radius: 0 0 80% 80%;
+            z-index: 1;
+        }
+
 
 }
-
 </style>

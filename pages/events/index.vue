@@ -1,6 +1,7 @@
 
 <template>
     <main id="index">
+
         <Introduction
             :twoButton=true
             title="Les évènements"
@@ -17,7 +18,7 @@
     #index{
         @include grid;
         & > * {
-            margin-bottom: 100px;
+            margin-bottom: 75px;
         }
     }
 </style>

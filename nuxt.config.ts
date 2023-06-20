@@ -1,10 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icons',
   ],
+
+  plugins: ['~/plugins/moment.js'],
+
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -14,7 +19,8 @@ export default defineNuxtConfig({
         },
 
       }
-    }
+    },
+    
   },
 
 })
